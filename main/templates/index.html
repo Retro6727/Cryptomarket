@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoConverter</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+    <h1>Welcome To CryptoConverter</h1>
+    </header>
+    <form class="converter">
+        <label>Select the currency type</label>
+        <select>
+            <option>Ethereum</option>
+            <option>Bitcoin</option>
+            <option>Stellar</option>
+            <option>Litecoin</option>
+            <option>BNB</option>
+            <option>Solana</option>
+            <option>Dogecoin</option>
+            <option>Toncoin</option>
+            <option>USD</option>
+            <option>GBP</option>
+            <option>INR</option>
+        </select>
+        <label>Enter the amount you want to convert</label>
+        <input type="text"><br>
+        <button>Convert</button><br>
+        <label>Select the currency type</label>
+        <select>
+            <option>Ethereum</option>
+            <option>Bitcoin</option>
+            <option>Stellar</option>
+            <option>Litecoin</option>
+            <option>BNB</option>
+            <option>Solana</option>
+            <option>Dogecoin</option>
+            <option>Toncoin</option>
+            <option>USD</option>
+            <option>GBP</option>
+            <option>INR</option>
+        </select>
+        <label>Converted Amount</label>
+        <input type="text" readonly>
+    </form>
+</body>
+</html>
