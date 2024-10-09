@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="container-fluid" id="cf1" style="background-image: url('{% static 'images\crback.jpg' %}'); background-size: cover;">
+        <div class="row text-center py-5 bg-secondary">
+            <h2 class="text-light">The <strong>New Arc</strong> of BlockChain</h2>
+            <p class="text-light">Join us in revolutionizing the future of finance and technology through decentralized solutions.</p>
+        </div>
+    </div>
+    <div class="container-fluid py-5" id="cf">
+        <div class="row text-left">
+        <div class="col-md-6">
+            <h1 class="text text-center py-5">Our Motive</h2>
+            <section class="py-5">
+                <p>The motive of our organization is to provide a secure, transparent, and decentralized platform for users to store, transfer, and manage digital assets, such as cryptocurrencies, in a trustless and immutable manner. By leveraging blockchain technology, CryptoArk aims to create a more efficient, cost-effective, and accessible way for individuals and organizations to participate in the digital economy.
+            </p>
+            </section>
+            <button class="btn btn-outline-light" type="button" onclick="window.location.href='{% url 'abouts' %}'">Abouts</button>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/cryo.gif' %}" width=100%;>
+        </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-warning" id="cf2">
+        <div class="row mx-5 py-4">
+            <div class="col-md-4 text-center">
+                <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/user-shield.png" alt="Secure Transactions" class="mb-3"/>
+                <h3 class="display-5">Secure Transactions</h3>
+                <p>Our platform ensures security for digital assets.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/nui2--v5.png" alt="User Friendly Interface" class="mb-3"/>
+                <h3 class="display-5">User Friendly Interface</h3>
+                <p>Navigate effortlessly with our intuitive design.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/online-support--v2.png" alt="24/7 Support" class="mb-3"/>
+                <h3 class="display-5">24/7 Support</h3>
+                <p>We’re here to help you anytime, day or night.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mx-auto" id="ad3">
+        <h2 class="text text-center">Your Investment Are Secured With Us</h2>
+        <div class=list-container>
+            <h4 class="list-item p-5 ">Multilevel Security</h4>
+            <h4 class="list-item p-5">Advanced Encryption</h4>
+            <h4 class="list-item p-5">Global Best Practices</h4>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+        </div>
+    </div>
+    <div class="text-center my-4">
+        <a class="btn btn-primary btn-lg">Join Us</a>
+    </div>
+{% endblock %}
+{% block footer %}
+        {% include 'footer.html' %}
+{% endblock %}

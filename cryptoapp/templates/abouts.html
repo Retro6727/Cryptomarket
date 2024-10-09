@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About the Company {% endblock %}
+
+<body>
+{% block content %}
+<div class="container-fluid bg-info">
+    <div class="row py-5">
+        <div class="col-md-6">
+            <img src="{% static 'images/td.jpg' %}" width=100% height="100%">
+        </div>
+        <div class="col-md-6">
+            <h1 class="text text-center py-5 text-primary-emphasis">About Cryptoark</h1>
+            <section class="py-5">
+                <p>Cryptoark empowers individuals to take control of their financial futures by harnessing the power of blockchain technology. Our mission is to bridge the gap between traditional finance and decentralized systems, providing a secure and accessible platform for users to buy, sell, and manage their digital assets. By fostering a community-driven approach, we aim to democratize access to financial services and promote economic freedom for all.
+            </p>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="container-fluid p-4">
+    <div class="row">
+        <div class="col-md-6">
+            <p>At CryptoArk, we specialize in developing and delivering cutting-edge, end-to-end blockchain solutions for the global digital asset community. <br><br>Our primary focus is on creating low-latency, high-performance platforms that provide accurate real-time analysis and intuitive user interfaces. By leveraging our cross-functional expertise in blockchain technology and digital asset markets, we are uniquely positioned to understand and address the complex requirements of various market participants. <br><br> Our team's extensive experience in blockchain development and digital asset markets enables us to design and deliver tailored solutions that meet the specific needs of our clients. Whether it's building secure and scalable blockchain infrastructure, creating user-friendly interfaces for digital asset management, or providing real-time analytics and insights, we are committed to helping our clients navigate the rapidly evolving digital asset landscape.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/bitcoin-cheers.gif' %}" width="100%">
+        </div>
+    </div>
+</div>
+<div class="container-fluid p-5">
+    <div class="row">
+        <h1 class="text-center">Our Partners</h1>
+        <div class="logos" style="display: inline; opacity: 50%; padding-left: 83px;">
+        <img src="{% static 'images/Coinbase_logo.png' %}" width="12%" style="margin-right: 5%;">
+        <img src="{% static 'images/hsbc_logo.png' %}" width="12%" style="margin-right: 5%;">
+        <img src="{% static 'images/Revolut.png' %}" width="12%" style="margin-right: 5%;">
+        <img src="{% static 'images/dcx_logo.png' %}" width="12%" style="margin-right: 5%;">
+        <img src="{% static 'images/woox.png' %}" width="12%" style="margin-right: 5%;">
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block footer%}
+    {% include 'footer.html' %}
+{% endblock footer%}
+</body>

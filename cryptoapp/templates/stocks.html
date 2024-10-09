@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <form class="text-center" method="post">
+                        {% csrf_token %}
+                        {{form.amount}}
+                        {{form.from_currency}}
+                        {{form.to_currency}}
+                        {{form.converted_amount}}<br>
+                        <button method="get">Convert</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
