@@ -10,3 +10,12 @@ class UserRegistration(models.Model):
 
     def __str__(self):
         return self.first_name
+    
+class CryptoConversion(models.Model):
+    amount = models.DecimalField(max_digits=20, decimal_places=2)
+    from_currency = models.CharField(max_length=10)
+    to_currency = models.CharField(max_length=10)
+    converted_amount = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.amount} {self.from_currency} to {self.to_currency}"

@@ -1,61 +1,109 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home{% endblock title %}
+<head>
+    
+</head>
 
 {% block content %}
     <div class="container-fluid" id="cf1" style="background-image: url('{% static 'images\crback.jpg' %}'); background-size: cover;">
         <div class="row text-center py-5 bg-secondary">
-            <h2 class="text-light">The <strong>New Arc</strong> of BlockChain</h2>
-            <p class="text-light">Join us in revolutionizing the future of finance and technology through decentralized solutions.</p>
+            <h2 class="text-light animate__animated animate__fadeInDown">The <strong>New Arc</strong> of BlockChain</h2>
+            <p class="text-light animate__animated animate__fadeInUp">Join us in revolutionizing the future of finance and technology through decentralized solutions.</p>
         </div>
     </div>
     <div class="container-fluid py-5" id="cf">
         <div class="row text-left">
         <div class="col-md-6">
-            <h1 class="text text-center py-5">Our Motive</h2>
-            <section class="py-5">
+            <h1 class="text text-center py-5" data-aos=fade-left>Our Motive</h2>
+            <section class="py-5" data-aos=fade-left>
                 <p>The motive of our organization is to provide a secure, transparent, and decentralized platform for users to store, transfer, and manage digital assets, such as cryptocurrencies, in a trustless and immutable manner. By leveraging blockchain technology, CryptoArk aims to create a more efficient, cost-effective, and accessible way for individuals and organizations to participate in the digital economy.
             </p>
             </section>
-            <button class="btn btn-outline-light" type="button" onclick="window.location.href='{% url 'abouts' %}'">Abouts</button>
+            <button class="btn btn-outline-light" data-aos=fade-up type="button" onclick="window.location.href='{% url 'abouts' %}'">Abouts</button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos=fade-left>
             <img src="{% static 'images/cryo.gif' %}" width=100%;>
         </div>
         </div>
     </div>
-    <div class="container-fluid bg-warning" id="cf2">
-        <div class="row mx-5 py-4">
-            <div class="col-md-4 text-center">
-                <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/user-shield.png" alt="Secure Transactions" class="mb-3"/>
-                <h3 class="display-5">Secure Transactions</h3>
-                <p>Our platform ensures security for digital assets.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/nui2--v5.png" alt="User Friendly Interface" class="mb-3"/>
-                <h3 class="display-5">User Friendly Interface</h3>
-                <p>Navigate effortlessly with our intuitive design.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/online-support--v2.png" alt="24/7 Support" class="mb-3"/>
-                <h3 class="display-5">24/7 Support</h3>
-                <p>We’re here to help you anytime, day or night.</p>
-            </div>
-        </div>
+    <div id="featuresCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://img.icons8.com/3d-fluency/94/user-shield.png" alt="Secure Transactions" class="d-block mx-auto"/>
+      <h3 class="text-center">Secure Transactions</h3>
+      <p class="text-center">Our platform ensures security for digital assets.</p>
     </div>
+    <div class="carousel-item">
+      <img src="https://img.icons8.com/3d-fluency/94/nui2--v5.png" alt="User Friendly Interface" class="d-block mx-auto"/>
+      <h3 class="text-center">User Friendly Interface</h3>
+      <p class="text-center">Navigate effortlessly with our intuitive design.</p>
+    </div>
+    <div class="carousel-item">
+      <img src="https://img.icons8.com/3d-fluency/94/online-support--v2.png" alt="24/7 Support" class="d-block mx-auto"/>
+      <h3 class="text-center">24/7 Support</h3>
+      <p class="text-center">We’re here to help you anytime, day or night.</p>
+    </div>
+    </div>
+        <a class="carousel-control-prev" href="#featuresCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#featuresCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+    </div>
+
     <div class="container-fluid mx-auto" id="ad3">
-        <h2 class="text text-center">Your Investment Are Secured With Us</h2>
+        <h2 class="text text-center" data-aos=fade-left>Your Investment Are Secured With Us</h2>
         <div class=list-container>
-            <h4 class="list-item p-5 ">Multilevel Security</h4>
-            <h4 class="list-item p-5">Advanced Encryption</h4>
-            <h4 class="list-item p-5">Global Best Practices</h4>
+            <h4 class="list-item p-5" data-aos=flip-left>Multilevel Security</h4>
+            <h4 class="list-item p-5" data-aos=flip-left>Advanced Encryption</h4>
+            <h4 class="list-item p-5" data-aos=flip-left>Global Best Practices</h4>
             <hr style="height:2px;border-width:0;color:gray;background-color:gray">
         </div>
     </div>
-    <div class="text-center my-4">
-        <a class="btn btn-primary btn-lg">Join Us</a>
-    </div>
+    <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Click to Join Us">Join Us</button>
+
+    <script>
+        let timeout;
+        let warningTimeout;
+        const idleTimeLimit = 10 * 60 * 1000; // 15 minutes
+        const warningTimeLimit = 8 * 60 * 1000; // 10 minutes
+
+        // Function to reset the idle timer on user activity
+        function resetIdleTimer() {
+            clearTimeout(timeout);
+            clearTimeout(warningTimeout);
+            timeout = setTimeout(logoutUser, idleTimeLimit);  // Set logout timeout
+            warningTimeout = setTimeout(showWarning, warningTimeLimit);  // Set warning timeout
+        }
+
+        // Function to show inactivity warning
+        function showWarning() {
+            alert('You have been inactive for a while. You will be logged out soon.');
+            // Optionally, provide an option to extend the session
+        }
+
+        // Function to logout the user
+        function logoutUser() {
+            window.location.href = '/logout/';  // Trigger the Django logout
+        }
+
+        // Add event listeners for various user interactions
+        document.addEventListener('mousemove', resetIdleTimer);
+        document.addEventListener('keypress', resetIdleTimer);
+        document.addEventListener('click', resetIdleTimer);
+        document.addEventListener('scroll', resetIdleTimer);
+
+        // Start the idle timer when the page loads
+        resetIdleTimer();
+
+
+        {% comment %} $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        }) {% endcomment %}
+    </script>
 {% endblock %}
 {% block footer %}
         {% include 'footer.html' %}

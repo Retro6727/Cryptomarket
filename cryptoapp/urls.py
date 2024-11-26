@@ -10,5 +10,7 @@ urlpatterns = [
     path('about/', views.about, name='abouts'),
     path('blog/', views.blog, name='blogs'),
     path('stocks/', views.stocks, name='stock_exchange'),
+    path('support/', views.support, name='support'),
+    path('customout', views.custom_logout, name='custom_log'),
     
 ]
