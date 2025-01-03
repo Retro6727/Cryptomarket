@@ -1,2 +1,2 @@
-# CryptoArk
+# Cryptomarket
 This project leverages Django to create an engaging educational platform centered around blockchain technology. Key features include user registration and authentication, ensuring a secure environment for users to learn about cryptocurrencies. By storing user records in a database, the application not only provides a seamless experience but also fosters a community of learners eager to understand the complexities of the crypto world.
